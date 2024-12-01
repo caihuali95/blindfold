@@ -11,8 +11,10 @@
 ## Usage
 ### 1. Preparation
 1. Install an OS on the TF card with [Raspberry Pi Imager](https://www.raspberrypi.com/software/).
+
     We tested the following steps on Raspberry Pi 4 (RPI4) using Raspberry Pi OS Lite (64-bit) released on 2024-11-19.
 2. Set up user name and password. We assume the user name is "usr" in the following steps.
+
     To use a different user name, please change line 29 of device/rpi/flash.sh of this repo accordingly.
 3. Clone this repo to local and enter the Blindfold folder.
 4. Build Blindfold and flash the TF card.
@@ -56,6 +58,7 @@ Evaluation with Blindfold enabled:
     sudo ./run_me.sh
     ```
 1. Run LMbench and print the aggregative results.
+
     1.1 For non-sensitive configuration:
     ```bash
     ./batch_test_lmbench.sh non
@@ -71,6 +74,7 @@ Evaluation with Blindfold enabled:
     ./test_syscalls.py -a
     ```
 3. Evaluate app latency, e.g., run OTP for 100 times.
+
     3.1 For non-sensitive configuration:
     ```bash
     ./test_app.py 100 ./otp
@@ -80,6 +84,7 @@ Evaluation with Blindfold enabled:
     ./test_app.py 100 ./adapted_otp
     ```
 4. Run other application, e.g., test fork/clone/futex/signal.
+
     4.1 For non-sensitive configuration:
     ```bash
     ./test
