@@ -213,8 +213,8 @@ def prepare(environment, executable):
         RESULT_DIR = LM_RESULT_DIR + "/sen"
         print("mkdir -p " + RESULT_DIR)
         os.system("mkdir -p " + RESULT_DIR)
-        print("./adapter " + BIN + executable + " arm64")
-        os.system("./adapter " + BIN + executable + " arm64")
+        print("./adapter " + BIN + executable)
+        os.system("./adapter " + BIN + executable)
         os.system("chmod +x " + BIN + "adapted_" + executable)
         return "adapted_"
 

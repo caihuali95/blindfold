@@ -163,7 +163,7 @@ for folder in folders:
             if just_native:
                 continue
 
-            cmd = "./adapter %s arm64" % filepath
+            cmd = "./adapter %s" % filepath
             print(cmd)
             os.system(cmd)
             filepath = join(subdir, "adapted_" + file)

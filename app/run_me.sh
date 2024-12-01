@@ -12,6 +12,7 @@ fi
 
 sudo chown -R usr ./*
 sudo ./set_cpu_freq.sh
+sudo apt install automake -y
 
 if [ ! -f "$HOME/adapter" ]; then
     echo "adapter does not exist and no way to retrofit the apps"
@@ -27,6 +28,5 @@ $HOME/adapter test
 chmod +x $HOME/adapted_test
 
 ./build_lmbench.sh
-sudo apt install automake -y
 python3 ./test_syscalls.py -p
 python3 ./test_syscalls.py -b
