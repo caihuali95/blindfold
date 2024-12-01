@@ -10,7 +10,7 @@ else
     echo "Running as user."
 fi
 
-sudo chown -R usr ./*
+sudo chown -R $(whoami) ./*
 sudo ./set_cpu_freq.sh
 sudo apt install automake -y
 
