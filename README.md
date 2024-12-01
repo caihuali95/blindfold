@@ -53,43 +53,43 @@ Evaluation on native Linux:
     ./nano -n
     ```
 Evaluation with Blindfold enabled:
-0. Enable Blindfold. This command has to be run with root privilege.
+1. Enable Blindfold. This command has to be run with root privilege.
     ```bash
     sudo ./run_me.sh
     ```
-1. Run LMbench and print the aggregative results.
+2. Run LMbench and print the aggregative results.
 
-    1.1 For non-sensitive configuration:
+    2.1 For non-sensitive configuration:
     ```bash
     ./batch_test_lmbench.sh non
     ./print_lmbench_result.py non
     ```
-    1.2 For sensitive configuration:
+    2.2 For sensitive configuration:
     ```bash
     ./batch_test_lmbench.sh sen
     ./print_lmbench_result.py sen
     ```
-2. Run LTP system call testcases.
+3. Run LTP system call testcases.
     ```bash
     ./test_syscalls.py -a
     ```
-3. Evaluate app latency, e.g., run OTP for 100 times.
-
-    3.1 For non-sensitive configuration:
-    ```bash
-    ./test_app.py 100 ./otp
-    ```
-    3.2 For sensitive configuration:
-    ```bash
-    ./test_app.py 100 ./adapted_otp
-    ```
-4. Run other application, e.g., test fork/clone/futex/signal.
+4. Evaluate app latency, e.g., run OTP for 100 times.
 
     4.1 For non-sensitive configuration:
     ```bash
-    ./test
+    ./test_app.py 100 ./otp
     ```
     4.2 For sensitive configuration:
+    ```bash
+    ./test_app.py 100 ./adapted_otp
+    ```
+5. Run other application, e.g., test fork/clone/futex/signal.
+
+    5.1 For non-sensitive configuration:
+    ```bash
+    ./test
+    ```
+    5.2 For sensitive configuration:
     ```bash
     ./adapted_test
     ```
