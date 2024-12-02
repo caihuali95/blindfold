@@ -13,20 +13,22 @@ Blindfold protects sensitive user application data from the untrusted operating 
 
 ## Usage
 ### 1. Preparation
-1. Install an OS on the TF card with [Raspberry Pi Imager](https://www.raspberrypi.com/software/).
+1. Install Raspberry Pi OS on the TF card with [Raspberry Pi Imager](https://www.raspberrypi.com/software/).
 
     We tested the following steps on Raspberry Pi 4 (RPI4) using Raspberry Pi OS Lite (64-bit) released on 2024-11-19.
 2. Set up user name and password. We assume the user name is "usr" in the following steps.
 
     To use a different user name, please change line 29 of device/rpi/flash.sh of this repo accordingly.
-3. Clone this repo to local and enter the Blindfold folder.
-4. Build Blindfold and flash the TF card.
+3. Install [Rust](https://www.rust-lang.org/tools/install).
+4. Clone this repo to local and enter the Blindfold folder.
+5. Build Blindfold and flash the TF card.
     ```bash
+    sudo apt install make gcc flex bison gcc-aarch64-linux-gnu g++-aarch64-linux-gnu libssl-dev -y
     cd ./device/rpi
     ./build.sh
     sudo ./flash.sh
     ```
-5. Boot up RPI4 with the TF card, connect it to ethernet, and build benchmark. Do not run this command with root privilege.
+6. Boot up RPI4 with the TF card, connect it to ethernet, and build benchmark. Do not run this command with root privilege.
     ```bash
     ./run_me.sh
     ```
