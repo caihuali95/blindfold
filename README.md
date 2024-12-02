@@ -98,3 +98,6 @@ Evaluation with Blindfold enabled:
     ```bash
     ./adapted_test
     ```
+
+## License
+MIT License
