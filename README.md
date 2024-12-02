@@ -2,6 +2,9 @@
 
 ## Overview
 
+This repository provides a proof-of-concept implementation of Blindfold.
+Blindfold protects sensitive user application data from the untrusted operating system, mainly leveraging a trusted software called Guardian running at a higher privilege level.
+
 ## Prerequisites
 - Raspberry Pi 4 Model B with 8GB DRAM
 - TF card
