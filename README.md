@@ -100,4 +100,4 @@ Evaluation with Blindfold enabled:
     ```
 
 ## License
-MIT License
+GPL-2.0 License
